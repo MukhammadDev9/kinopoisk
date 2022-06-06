@@ -1,0 +1,86 @@
+:root {
+  --mainColor1: #1f1f1f;
+  --mainColor2: #f4f4f4;
+  --mainColor3: #ff6600;
+  --mainColor4: #ffffff;
+  --mainColor5: #f2f2f226;
+  --maxWidth: 1280px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  &::-webkit-scrollbar {
+    width: 6px; /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--mainColor2); /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor1); /* color of the scroll thumb */
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainColor4);
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+  outline: none;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+.opacity{
+  transition: all .1s ease-out;
+  opacity: .6;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.button_gradient{
+  border-radius: 4px;
+  color: var(--mainColor4);
+  background: radial-gradient(96.72% 187.09% at 0px 100.29%, rgb(255, 92, 0) 5.21%, rgb(234, 80, 124) 25.52%, rgb(185, 65, 239) 48.44%, rgb(91, 97, 255) 70.83%, rgb(33, 190, 231) 93.75%);
+  padding: 4px 14px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 14px;
+  font-weight: 600;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+@mixin d-flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
